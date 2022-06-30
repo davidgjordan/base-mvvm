@@ -28,11 +28,13 @@ class SignupViewController: UIViewController {
         let email = emailTextField.text ?? "test@user.com"
         let pass = passwordTextField.text ?? "pass"
         
-        SignUpViewModel.shared.addUser(name: name, age: age, email: email, password: pass) { user in
-            if user != nil {
+        SignUpViewModel.shared.addUser(name: name, age: age, email: email, password: pass) { result in
+            switch result {
+            case .success(let user):
+                print("Success", user)
                 self.navigationController?.popViewController(animated: true)
-            } else {
-                print("Error to create a user")
+            case .failure(let error):
+                print("Error", error)
             }
         }
     }

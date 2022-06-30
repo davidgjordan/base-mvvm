@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		5C3D6E93286CF60D007CB9E3 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3D6E92286CF60D007CB9E3 /* SignUpViewModel.swift */; };
 		5C3D6E95286CFC01007CB9E3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3D6E94286CFC01007CB9E3 /* NetworkManager.swift */; };
+		5C5DF63F286E44DC00524196 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5DF63E286E44DC00524196 /* CoreDataManager.swift */; };
+		5C5DF641286E46A200524196 /* AuthFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5DF640286E46A200524196 /* AuthFirebaseManager.swift */; };
+		5C5DF643286E492300524196 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5DF642286E492300524196 /* LoginViewModel.swift */; };
 		5CE9A5B4286A75E300636FFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE9A5B3286A75E300636FFE /* AppDelegate.swift */; };
 		5CE9A5B6286A75E300636FFE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE9A5B5286A75E300636FFE /* SceneDelegate.swift */; };
 		5CE9A5B8286A75E300636FFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE9A5B7286A75E300636FFE /* ViewController.swift */; };
 		5CE9A5BB286A75E300636FFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CE9A5B9286A75E300636FFE /* Main.storyboard */; };
-		5CE9A5BE286A75E300636FFE /* __social_network.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5CE9A5BC286A75E300636FFE /* __social_network.xcdatamodeld */; };
+		5CE9A5BE286A75E300636FFE /* base-mvvm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5CE9A5BC286A75E300636FFE /* base-mvvm.xcdatamodeld */; };
 		5CE9A5C0286A75E500636FFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CE9A5BF286A75E500636FFE /* Assets.xcassets */; };
 		5CE9A5C3286A75E500636FFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CE9A5C1286A75E500636FFE /* LaunchScreen.storyboard */; };
 		5CE9A5D8286A77DB00636FFE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CE9A5D7286A77DB00636FFE /* GoogleService-Info.plist */; };
@@ -38,6 +41,9 @@
 /* Begin PBXFileReference section */
 		5C3D6E92286CF60D007CB9E3 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		5C3D6E94286CFC01007CB9E3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		5C5DF63E286E44DC00524196 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		5C5DF640286E46A200524196 /* AuthFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFirebaseManager.swift; sourceTree = "<group>"; };
+		5C5DF642286E492300524196 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		5CE9A5B0286A75E300636FFE /* base-mvvm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "base-mvvm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CE9A5B3286A75E300636FFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CE9A5B5286A75E300636FFE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,7 +119,7 @@
 				5CE9A5BF286A75E500636FFE /* Assets.xcassets */,
 				5CE9A5C1286A75E500636FFE /* LaunchScreen.storyboard */,
 				5CE9A5C4286A75E500636FFE /* Info.plist */,
-				5CE9A5BC286A75E300636FFE /* __social_network.xcdatamodeld */,
+				5CE9A5BC286A75E300636FFE /* base-mvvm.xcdatamodeld */,
 				5CE9A5D7286A77DB00636FFE /* GoogleService-Info.plist */,
 			);
 			path = "base-mvvm";
@@ -204,6 +210,7 @@
 			children = (
 				5CEECEE8286BC841009C6B14 /* FirebaseManager.swift */,
 				5C3D6E94286CFC01007CB9E3 /* NetworkManager.swift */,
+				5C5DF640286E46A200524196 /* AuthFirebaseManager.swift */,
 			);
 			path = managers;
 			sourceTree = "<group>";
@@ -211,6 +218,7 @@
 		5CE9A5D4286A76B800636FFE /* managers */ = {
 			isa = PBXGroup;
 			children = (
+				5C5DF63E286E44DC00524196 /* CoreDataManager.swift */,
 			);
 			path = managers;
 			sourceTree = "<group>";
@@ -293,6 +301,7 @@
 		5CEECEDB286B8D95009C6B14 /* viewModels */ = {
 			isa = PBXGroup;
 			children = (
+				5C5DF642286E492300524196 /* LoginViewModel.swift */,
 			);
 			path = viewModels;
 			sourceTree = "<group>";
@@ -467,6 +476,8 @@
 				5CEECEE6286BC829009C6B14 /* SignupViewController.swift in Sources */,
 				5CE9A5B8286A75E300636FFE /* ViewController.swift in Sources */,
 				5C3D6E95286CFC01007CB9E3 /* NetworkManager.swift in Sources */,
+				5C5DF643286E492300524196 /* LoginViewModel.swift in Sources */,
+				5C5DF641286E46A200524196 /* AuthFirebaseManager.swift in Sources */,
 				5CEECEF1286BCF3F009C6B14 /* EncodableExtension.swift in Sources */,
 				5CEECEE9286BC841009C6B14 /* FirebaseManager.swift in Sources */,
 				5CE9A5B4286A75E300636FFE /* AppDelegate.swift in Sources */,
@@ -475,7 +486,8 @@
 				5CEECEFB286BDB20009C6B14 /* PostsListViewController.swift in Sources */,
 				5CEECEDF286B8DC0009C6B14 /* LoginViewController.swift in Sources */,
 				5C3D6E93286CF60D007CB9E3 /* SignUpViewModel.swift in Sources */,
-				5CE9A5BE286A75E300636FFE /* __social_network.xcdatamodeld in Sources */,
+				5C5DF63F286E44DC00524196 /* CoreDataManager.swift in Sources */,
+				5CE9A5BE286A75E300636FFE /* base-mvvm.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,9 +639,9 @@
 				DEVELOPMENT_TEAM = 4YL2WE5L3Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "base-mvvm/Info.plist";
+				INFOPLIST_KEY_NSMainNibFile = Main;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -656,9 +668,9 @@
 				DEVELOPMENT_TEAM = 4YL2WE5L3Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "base-mvvm/Info.plist";
+				INFOPLIST_KEY_NSMainNibFile = Main;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -743,13 +755,13 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		5CE9A5BC286A75E300636FFE /* __social_network.xcdatamodeld */ = {
+		5CE9A5BC286A75E300636FFE /* base-mvvm.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				5CE9A5BD286A75E300636FFE /* __social_network.xcdatamodel */,
 			);
 			currentVersion = 5CE9A5BD286A75E300636FFE /* __social_network.xcdatamodel */;
-			path = __social_network.xcdatamodeld;
+			path = "base-mvvm.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -10,26 +10,18 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    
+    static weak var shared: SceneDelegate?
+
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        //setupRootControllerIfNeeded()
+        Self.shared = self
+        setupRootControllerIfNeeded(validUser: false)
         guard let _ = (scene as? UIWindowScene) else { return }
     }
     
-    func setupRootControllerIfNeeded() {
-        let validUser = false
-        
-        /*DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            if validUser {
-                // Create VC for TabBar
-                let rootViewController = self.getRootViewControllerForValidUser()
-                self.window?.rootViewController = rootViewController
-            } else {
-                let rootViewController = self.getRootViewControllerForInvalidUser()
-                self.window?.rootViewController = rootViewController
-            }
-        }*/
+    func setupRootControllerIfNeeded(validUser: Bool) {
+        // TODO: - User real data to check if there is a valid user.
+        //let validUser = false
         if validUser {
             // Create VC for TabBar
             let rootViewController = getRootViewControllerForValidUser()
@@ -38,7 +30,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let rootViewController = getRootViewControllerForInvalidUser()
             self.window?.rootViewController = rootViewController
         }
-        
         self.window?.makeKeyAndVisible()
     }
     
@@ -125,7 +116,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
         
         // Save changes in the application's managed object context when the application transitions to the background.
-        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+        CoreDataManager.shared.saveContext()
     }
     
     
