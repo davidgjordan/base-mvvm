@@ -119,7 +119,7 @@ class NetworkManager {
     func post<T: Decodable>( _ type: T.Type, from url: URL, withBody body: Any, completion: @escaping (Result<T, Error>)  -> Void  ) -> URLSessionDataTask {
 
         var request = URLRequest(url: url)
-        request.httpMethod = "PUT"
+        request.httpMethod = "POST"
         request.httpBody = httpPostBody(with: body)
         request.allHTTPHeaderFields = headers
 
